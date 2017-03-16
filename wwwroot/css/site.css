@@ -1,0 +1,130 @@
+﻿body {
+}
+
+.navbar-fixed-top {
+  background-color: #111111;
+}
+
+label {
+  color: yellow;
+}
+
+.groupRow {
+  margin-top: 12px;
+  border-bottom: 1px solid whitesmoke;
+  border-top: 1px solid whitesmoke;
+  border-radius: 1px;
+}
+
+.myGroup {
+  margin-top: 12px;
+  border: 1px solid red;
+  border-radius: 1px;
+  margin-bottom: 20px;
+}
+
+.chatRow {
+  margin-top: 20px;
+  height: 200px;
+}
+
+.chatBox {
+  background-color: whitesmoke;
+  height: inherit;
+  border: 1px solid black;
+}
+
+.newGroupBorder {
+  background-color: whitesmoke;
+}
+
+.text-xs-left {
+  text-align: left;
+}
+
+.text-xs-right {
+  text-align: right;
+}
+
+.text-xs-center {
+  text-align: center;
+}
+
+.text-xs-justify {
+  text-align: justify;
+}
+
+@media (min-width: 768px) {
+  .text-sm-left {
+    text-align: left;
+  }
+
+  .text-sm-right {
+    text-align: right;
+  }
+
+  .text-sm-center {
+    text-align: center;
+  }
+
+  .text-sm-justify {
+    text-align: justify;
+  }
+}
+
+@media (min-width: 992px) {
+  .text-md-left {
+    text-align: left;
+  }
+
+  .text-md-right {
+    text-align: right;
+  }
+
+  .text-md-center {
+    text-align: center;
+  }
+
+  .text-md-justify {
+    text-align: justify;
+  }
+}
+
+@media (min-width: 1200px) {
+  .text-lg-left {
+    text-align: left;
+  }
+
+  .text-lg-right {
+    text-align: right;
+  }
+
+  .text-lg-center {
+    text-align: center;
+  }
+
+  .text-lg-justify {
+    text-align: justify;
+  }
+}
+
+.groupBottomRow {
+  padding: 15px 5px;
+}
+
+.groupTopRow {
+  padding: 15px 5px;
+}
+
+.groupOptionsRow {
+  padding: 5px 5px;
+  
+}
+
+.groupDescriptionRow {
+  padding: 15px 0px;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}

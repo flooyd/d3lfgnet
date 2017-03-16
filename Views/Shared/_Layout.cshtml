@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+  <meta name="viewport" content="width=device-width" charset="utf-8" />
+  <title>@ViewBag.Title</title>
+
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" />
+  <link href="~/lib/bootswatch/slate/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="~/css/site.css" />
+
+</head>
+<body>
+  <nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header" style="margin-left: 40px">
+        <a class="navbar-brand" href="/">D3LFG</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div>
+        <ul class="nav navbar-nav">
+          <li><a asp-controller="home" asp-action="about">About</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar navbar-right" style="margin-right: 40px">
+
+          @{
+            if (User.Identity.IsAuthenticated)
+            {
+              <li style="line-height: 50px; color: #a00c00; font-size: medium">@User.Identity.Name</li>
+              <li style="line-height: 50px; color: whitesmoke; padding-left: 15px; color: #a00c00;"><button id="logoutButton" onclick="window.location.href='/home/logout'" class="btn btn-default">Logout</button></li>
+            }
+            else
+            {
+              <li style="line-height: 50px"><button onclick="window.location.href='/home/beginlogin'" class="btn btn-default">Login</button></li>
+            }
+          }
+
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <div>
+    @RenderBody()
+  </div>
+
+  <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.2.1.min.js"></script>
+  <script src="/signalr/hubs"></script>
+
+  @RenderSection("Scripts", false)
+
+</body>
+</html>
